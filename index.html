@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <title>Not Fancy Random Number Generator: Built with Vue + Bulma</title>
+</head>
+<body>
+
+  <!-- app -->
+  <div id="app">
+    <div class="outer-container">
+      <h1 class="title">
+        Random Number Generator
+      </h1>
+      <div class="inner-container">
+
+        <div class="columns is-mobile columns-control">
+          <div class="column is-3">
+            <p>Length:</p>
+          </div>
+          <div class="column column-range">
+            <input
+              class="slider"
+              type="range"
+              min="1"
+              max="10"
+              v-on:change="generate"
+              v-model="value" />
+          </div>
+          <div class="column is-2">
+            <p>{{ value }}</p>
+          </div>
+        </div>
+
+        <div class="columns is-mobile is-centered columns-result">
+          <div class="column">
+            <div class="result">
+              <div class="result-box">
+                <h2 class="random-number">
+                  {{ password }}
+                </h2>
+              </div>
+              <div class="result-button">
+                <button 
+                  class="button is-warning"
+                  v-on:click="generate">
+                  <i class="fa fa-refresh"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="vue.js"></script>
+</body>
+</html>

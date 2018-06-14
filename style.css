@@ -1,0 +1,122 @@
+/* ==================
+ *  VARIABLES
+ * ================== */
+:root {
+  --color-black: hsl(0, 0%, 7%);
+  --color-gray: hsl(0, 0%, 41%);
+  --color-light-gray: hsl(0, 0%, 91%);
+  --color-white: hsl(0, 0%, 98%);
+  --color-pink: hsl(348, 100%, 80%);
+  --color-pink-faint: hsla(348, 100%, 90%, 80%);
+
+  --border-box-radius: 5px;
+  --slider-height: 25px;
+}
+/* ==================
+ *  LAYOUT
+ * ================== */
+.outer-container {
+  font-family: 'Short Stack', cursive;
+  background: var(--color-pink);
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 50px 15px 0;
+}
+.inner-container {
+  padding: 50px 5%;
+  box-shadow: var(--box-shadow);
+  background: var(--color-pink-faint);
+  border-radius: 10px;
+  margin-top: 25px;
+}
+/* ==================
+ *  APP
+ * ================== */
+
+h1.title {
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.columns-control p {
+  color: var(--color-gray);
+}
+
+.column-range {
+  display: flex;
+}
+
+.columns-result {
+  text-align: center;
+}
+
+.result {
+  margin-top: 25px;
+  width: 300px;
+}
+
+.result-box {
+  padding: 20px;
+  background: var(--color-white);
+  border-top-left-radius: var(--border-box-radius);
+  border-top-right-radius: var(--border-box-radius);
+}
+
+.random-number {
+  color: hsl(348, 100%, 70%);
+  font-size: 28px;
+}
+
+.result-button button.is-warning {
+  width: 100%;
+  border-radius: 0;
+  border-bottom-left-radius: var(--border-box-radius);
+  border-bottom-right-radius: var(--border-box-radius);
+  color: var(--color-white);
+}
+
+.result-button button.is-warning:hover {
+  color: var(--color-pink);
+}
+
+/* ==================
+ *  SLIDER (W3School)
+ * ================== */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: var(--slider-height);
+  background: var(--color-light-gray);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--slider-height);
+  height: var(--slider-height);
+  background: var(--color-pink);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: var(--slider-height);
+  height: var(--slider-height);
+  background: var(--color-pink);
+  cursor: pointer;
+}
