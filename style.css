@@ -120,3 +120,18 @@ input[type="range"] {
   background: var(--color-pink);
   cursor: pointer;
 }
+
+/* ==================
+ *  SOCIAL MEDIA
+ * ================== */
+ .social-columns {
+   margin-top: 0px;
+   font-size: 10px;
+   color: hsl(0, 0%, 90%);
+   width: 100%;
+ }
+
+ .social-columns .column {
+   padding: 0.4em;
+   text-align: center;
+ }
